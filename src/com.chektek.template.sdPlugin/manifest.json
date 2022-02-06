@@ -1,0 +1,36 @@
+{
+  "Actions": [
+    {
+      "Icon": "actions/template/assets/actionimage",
+      "Name": "Dart Test",
+      "States": [
+        {
+          "Image": "actions/template/assets/action"
+        }
+      ],
+      "Tooltip": "This is an example tooltip",
+      "UUID": "com.chektek.template.action"
+    }
+  ],
+  "SDKVersion": 2,
+  "Author": "ChekTek LLC",
+  "CodePath": "main.exe",
+  "Description": "Example description",
+  "Name": "Dart Template",
+  "Icon": "actions/template/assets/action",
+  "URL": "https://www.chektek.com/",
+  "Version": "1.0.0",
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "10.11"
+    },
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Software": {
+    "MinimumVersion": "4.1"
+  }
+}

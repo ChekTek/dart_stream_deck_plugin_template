@@ -1,0 +1,6 @@
+{
+	"scripts": {
+		"build-windows": "dart compile exe ./src/main.dart -o ./src/com.chektek.template.sdPlugin/main.exe",
+		"distribute-windows": "distribute -b -i ./src/com.chektek.template.sdPlugin/ -o ./release/"
+	}
+}
