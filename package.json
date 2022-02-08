@@ -1,6 +1,8 @@
 {
 	"scripts": {
 		"build-windows": "dart compile exe ./src/main.dart -o ./src/com.chektek.template.sdPlugin/main.exe",
-		"distribute-windows": "distribute -b -i ./src/com.chektek.template.sdPlugin/ -o ./release/"
+		"distribute-windows": "distribute -b -i ./src/com.chektek.template.sdPlugin/ -o ./release/",
+		"build-macos": "dart compile exe ./src/main.dart -o ./src/com.chektek.template.sdPlugin/main",
+		"distribute-macos": "rm ./release/com.chektek.template.streamDeckPlugin && distribute -b -i ./src/com.chektek.template.sdPlugin/ -o ./release/"
 	}
 }

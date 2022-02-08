@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:web_socket_channel/io.dart';
+import 'libs/utils.dart';
 
-void main(List<dynamic> arguments) {
+void main(List<dynamic> arguments) async {
   var port = arguments[1];
   var pluginUUID = arguments[3];
   var event = arguments[5];
@@ -13,13 +13,8 @@ void main(List<dynamic> arguments) {
   File('event.txt').writeAsString(event);
   File('info.json').writeAsString(info);
 
-  var channel = IOWebSocketChannel.connect(Uri.parse('ws://127.0.0.1:$port'));
-
-  channel.sink.add('{"event":"$event","uuid":"$pluginUUID"}');
-
-  channel.stream.listen((event) {
-    File('socketed.txt').writeAsString(event);
-  });
-
-  channel.sink.add('{"event":"logMessage","payload":{"message":"TEST LOG"}}');
+  await Utils.log(port);
+  await Utils.log(pluginUUID);
+  await Utils.log(event);
+  await Utils.log(info);
 }

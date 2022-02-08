@@ -7,3 +7,4 @@ build/
 **.exe
 .vscode/**
 release/**
+.DS_Store

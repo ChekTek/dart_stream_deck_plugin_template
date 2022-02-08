@@ -15,6 +15,7 @@
   "SDKVersion": 2,
   "Author": "ChekTek LLC",
   "CodePath": "main.exe",
+  "CodePathMac": "main",
   "Description": "Example description",
   "Name": "Dart Template",
   "Icon": "actions/template/assets/action",
