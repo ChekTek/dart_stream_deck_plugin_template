@@ -2,11 +2,18 @@ import 'dart:io';
 
 class Utils {
   static log(String message) async {
-    var socket = await Socket.connect('localhost', 6969);
+    var socket = await WebSocket.connect('ws://localhost:6969');
+    socket.add(message);
+    socket.close();
+  }
 
-    socket.writeln(message);
+  static logAll(List<String> messages) async {
+    var socket = await WebSocket.connect('ws://localhost:6969');
+
+    for (var message in messages) {
+      socket.add(message);
+    }
 
     socket.close();
-    socket.destroy();
   }
 }
